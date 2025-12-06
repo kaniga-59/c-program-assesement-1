@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main()
+{
+    int q1, q2, q3, q4, q5;
+    int total;
+    float discount = 0, gst, final_amount;
+
+   
+    scanf("%d %d %d %d %d", &q1, &q2, &q3, &q4, &q5);
+
+   
+    if (q1 < 0 || q2 < 0 || q3 < 0 || q4 < 0 || q5 < 0)
+    {
+       
+        return 0;
+    }
+
+   
+    total = q1 + q2 + q3 + q4 + q5;
+
+   
+    if (total == 0) 
+    {
+        discount = 0;   
+    }
+    else if (total < 500) 
+    {
+        discount = 0;   
+    }
+    else if (total >= 500 && total <= 1000)
+    {
+        discount = 0.05;  
+    }
+    else if (total > 1000)
+    {
+        discount = 0.10;   
+    }
+
+   
+    gst = 0.05;
+
+    
+    final_amount = total - discount + gst;
+
+    printf("\n%d", total);
+    printf("\n%.2f", discount);
+    printf("\n%.2f", gst);
+    printf("\n%.2f\n", final_amount);
+
+    return 0;
+}
