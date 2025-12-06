@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    float level;
+    scanf("%f", &level);
+
+    if (level >= 0 && level <= 9)
+    {
+        printf("LOW + ALERT + Fill\n");                  
+    }
+    else if (level >= 10 && level <= 29)
+    {
+        printf("LOW + Fill\n");                          
+    }
+    else if (level >= 30 && level <= 70)
+    {
+        printf("MEDIUM\n");                              
+    }
+    else if (level >= 71 && level <= 100)
+    {
+        printf("HIGH\n");                                
+    }
+    else
+    {
+        printf("Error");
+    }
+
+    return 0;
+}
