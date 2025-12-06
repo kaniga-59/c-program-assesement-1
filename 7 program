@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int days;
+ 
+    scanf("%d", &days);
+
+    if (days < 0)
+    {
+        printf("Error  Invalid\n");
+    }
+    else if (days == 0) 
+    {
+        printf("No fine\n");                      
+    }
+    else if (days >= 1 && days <= 5)
+    {
+        printf("Fine = ₹%d\n", days * 2);         
+    }
+    else if (days >= 6 && days <= 10) 
+    {
+        printf("Fine = ₹%d\n", 10 + (days - 5) * 5); 
+    }
+    else if (days >= 11 && days <= 30) 
+    {
+        printf("Fine = ₹%d\n", 35 + (days - 10) * 10);
+    }
+    else if (days == 31)
+    {
+        printf("Membership Cancelled - Limit Exceeded\n"); 
+    }
+    else
+    {
+        printf("Membership Cancelled - Above Limit\n");    
+    }
+
+    return 0;
+}
+
